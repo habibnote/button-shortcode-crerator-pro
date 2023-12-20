@@ -1,0 +1,75 @@
+.single-btn{
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0efef;
+}
+.btn-right-area{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.single-row label, .bsc-btn-text-field p label{
+    font-weight: bold;
+}
+.single-row input, .bsc-btn-text-field p input{
+    width: 100%;
+    padding: 3px 10px;
+    border: 1px solid #ddd;
+}
+.dashicons-trash{
+    color:red;
+    margin-right: 10px;
+}
+.dashicons-plus-alt{
+    color:green;
+    cursor:default;
+}
+.left-area{
+    /* display: none; */
+    width: 90%;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+.bsc-btn-text-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bsc-btn-text-field p{
+    width: 35%;
+}
+.bsc-btn-space-field,.bsc-btn-color-field{
+    padding:20px 0; 
+    display: flex;
+    justify-content: space-between;
+}
+.single-field{
+    width: 30%;
+}
+.single-field label{
+    display: block;
+}
+.single-field label span{
+    font-style: italic;
+    color: #a2a1a1;
+}
+.bsc_setting_metafield{
+    display: none;
+    border-top: 1px solid #ddd;
+}
+.bsc-btn-setting{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 55px;
+    border:none;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    background-color: rgb(2, 131, 141);
+    color:#fff;
+    cursor: pointer;
+}

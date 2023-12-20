@@ -42,12 +42,9 @@ class Admin {
             <h1>Settings</h1>
             <hr>
             <p>To use this plugin you need to acitve it first</p>
+            
             <div class="bsc-license_form">
                 <form>
-                    <p>
-                        <label for="bsc-ls-website">Website:</label>
-                        <input type="text"/>
-                    </p>
                     <p>
                         <label for="bsc-ls-website">License Key:</label>
                         <input type="text"/>

@@ -93,25 +93,7 @@ class Metabox {
 
         //meta box dom
         wp_nonce_field( 'bsc_nonce', 'bsc_nonce_field' );
-        ?>
-        <div class="bsc_button_metaboxes">
-            <div class="right-area">
-                <p class="single-row">  
-                    <label for="sub-title"><?php esc_html_e( 'Subtitle', 'bsc' ) ?></label><br>
-                    <input type="text" value="<?php esc_html_e( $sub_title_value , 'bsc' ); ?>" name="sub_title" id="sub_title">
-                </p>
-                <p>
-                </p>
-                <p class="single-row">
-                    <label for="bsc-offer"> <?php esc_html_e( 'Offer Title', 'bsc' ) ?> </label><br>
-                    <input type="text" value="<?php esc_html_e( $bsc_offer_value, 'bsc' ) ?>" name="bsc_offer" id="bsc-offer">
-                </p>
-
-                <?php ( new MetaField() )->bsc_btn_repeater( $post_id ); ?>
-
-            </div>
-        </div>
-        <?php
+        
     }   
 
     /**

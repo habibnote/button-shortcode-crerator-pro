@@ -14,7 +14,6 @@ class Metabox {
         add_action( 'add_meta_boxes', [$this, 'bsc_metaboxes'] );
         add_action( 'save_post', [$this, 'bsc_save_meta_info'] );
         add_action( 'manage_bs_creator_posts_custom_column', [$this, 'bsc_addshortcode_in_column'], 10, 2 );
-        add_filter( 'default_content', [$this, 'bsc_setdefault_btn_quantity'], 10, 2 );
         add_filter( 'manage_edit-bs_creator_columns', [$this, 'bsc_manage_post_columns'] );
     }
 
@@ -37,16 +36,6 @@ class Metabox {
     public function bsc_addshortcode_in_column( $column, $post_id ) {
         if( 'shortcode' == $column ) {
             printf( "[bsc_button id=%s/]", $post_id );
-        }
-    }
-
-    /**
-     * Set Inital button quontity
-     */
-    public function bsc_setdefault_btn_quantity( $content, $post ) {
-
-        if ( $post->post_type === 'bs_creator' && $post->post_status === 'auto-draft' ) {
-            update_post_meta( $post->ID, 'bsc_number_of_btn', 1 );
         }
     }
 

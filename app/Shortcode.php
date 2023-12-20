@@ -31,7 +31,6 @@ class Shortcode {
 
             $sub_title      = get_post_meta( $post_id, 'bsc_subtitle', true );
             $bsc_offer      = get_post_meta( $post_id, 'bsc_offer', true );
-            $bsc_btn_info   = get_post_meta( $post_id, 'bsc_btn_info', true );
 
             ?>
                 <div class="bsc-container">
@@ -50,50 +49,6 @@ class Shortcode {
                             }
                             if( $bsc_offer ) {
                                 printf( '<h4>%s</h4>', $bsc_offer );
-                            }
-
-                            if( $bsc_btn_info ) {
-                                $bsc_btn_count          = count( $bsc_btn_info['bsc_btn_text'] );
-                                
-                                $bsc_btn_text           = $bsc_btn_info['bsc_btn_text'];
-                                $bsc_btn_url            = $bsc_btn_info['bsc_btn_url'];
-                                $bsc_btn_padding        = $bsc_btn_info['bsc_btn_padding'];
-                                $bsc_btn_margin         = $bsc_btn_info['bsc_btn_margin'];
-                                $bsc_btn_color          = $bsc_btn_info['bsc_btn_color'];
-                                $bsc_btn_background     = $bsc_btn_info['bsc_btn_background'];
-                                $bsc_btn_border_color   = $bsc_btn_info['bsc_btn_border-color'];
-                                $bsc_btn_hover_color    = $bsc_btn_info['bsc_btn_hover_color'];
-                                $bsc_btn_hover_bg_color = $bsc_btn_info['bsc_btn_hover_bg_color'];
-                                $bsc_btn_font_size      = $bsc_btn_info['bsc_btn_font_size'];
-                                $bsc_btn_font_weight    = $bsc_btn_info['bsc_btn_font_weight'];
-                                $bsc_btn_font_style     = $bsc_btn_info['bsc_btn_font-style'];
-                                
-                                echo "<div class='bsc-btns'>";
-
-                                for( $i = 0; $i < $bsc_btn_count; $i++ ) {
-                                    printf(
-                                        '<button
-                                        class="bsc-btn" 
-                                        style="margin:%3$spx;border-color:%7$s;"
-                                        ><a target="_blank"
-                                        id="bsc-btn-a"
-                                        style="padding:%4$spx;color:%5$s;background-color:%6$s; font-size:%8$spx; font-weight:%9$s; font-style:%10$s;"
-                                        href="%1$s">%2$s</a></button><br>',
-                                        esc_url( $bsc_btn_url[$i] ),
-                                        esc_html( $bsc_btn_text[$i] , 'bsc' ),
-                
-                                        esc_attr( $bsc_btn_margin[$i] ),
-                                        esc_attr( $bsc_btn_padding[$i] ),
-                                        esc_attr( $bsc_btn_color[$i] ),
-                                        esc_attr( $bsc_btn_background[$i] ),
-                                        esc_attr( $bsc_btn_border_color[$i] ),
-                                        esc_attr( $bsc_btn_font_size[$i] ),
-                                        esc_attr( $bsc_btn_font_weight[$i] ),
-                                        esc_attr( $bsc_btn_font_style[$i] ),
-                                    );
-                                }
-
-                                echo "</div>";
                             }
                         ?>
                     </div>

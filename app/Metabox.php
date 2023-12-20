@@ -105,22 +105,20 @@ class Metabox {
         $bsc_offer       = $_POST['bsc_offer'] ?? '';
 
 
-        $bsc_btn_info    = [];
-        $bsc_btn_info['bsc_btn_text']           = $_POST['bsc_btn_text'] ?? '';
-        $bsc_btn_info['bsc_btn_url']            = $_POST['bsc_btn_url'] ?? '';
-        $bsc_btn_info['bsc_btn_padding']        = $_POST['bsc_btn_padding'] ?? '';
-        $bsc_btn_info['bsc_btn_margin']         = $_POST['bsc_btn_margin'] ?? '';
-        $bsc_btn_info['bsc_btn_color']          = $_POST['bsc_btn_color'] ?? '';
-        $bsc_btn_info['bsc_btn_background']     = $_POST['bsc_btn_background'] ?? '';
-        $bsc_btn_info['bsc_btn_border-color']   = $_POST['bsc_btn_border-color'] ?? '';
-        $bsc_btn_info['bsc_btn_hover_color']    = $_POST['bsc_btn_hover_color'] ?? '';
-        $bsc_btn_info['bsc_btn_hover_bg_color'] = $_POST['bsc_btn_hover_bg_color'] ?? '';
-        $bsc_btn_info['bsc_btn_font_size']      = $_POST['bsc_btn_font_size'] ?? '';
-        $bsc_btn_info['bsc_btn_font_weight']    = $_POST['bsc_btn_font_weight'] ?? '';
-        $bsc_btn_info['bsc_btn_font-style']     = $_POST['bsc_btn_font-style'] ?? '';
+        // $bsc_btn_info    = [];
+        // $bsc_btn_info['bsc_btn_text']           = $_POST['bsc_btn_text'] ?? '';
+        // $bsc_btn_info['bsc_btn_url']            = $_POST['bsc_btn_url'] ?? '';
+        // $bsc_btn_info['bsc_btn_padding']        = $_POST['bsc_btn_padding'] ?? '';
+        // $bsc_btn_info['bsc_btn_margin']         = $_POST['bsc_btn_margin'] ?? '';
+        // $bsc_btn_info['bsc_btn_color']          = $_POST['bsc_btn_color'] ?? '';
+        // $bsc_btn_info['bsc_btn_background']     = $_POST['bsc_btn_background'] ?? '';
+        // $bsc_btn_info['bsc_btn_border-color']   = $_POST['bsc_btn_border-color'] ?? '';
+        // $bsc_btn_info['bsc_btn_hover_color']    = $_POST['bsc_btn_hover_color'] ?? '';
+        // $bsc_btn_info['bsc_btn_hover_bg_color'] = $_POST['bsc_btn_hover_bg_color'] ?? '';
+        // $bsc_btn_info['bsc_btn_font_size']      = $_POST['bsc_btn_font_size'] ?? '';
+        // $bsc_btn_info['bsc_btn_font_weight']    = $_POST['bsc_btn_font_weight'] ?? '';
+        // $bsc_btn_info['bsc_btn_font-style']     = $_POST['bsc_btn_font-style'] ?? '';
         
-
-        // update_post_meta( $post_id, 'bsc_btn_info', $bsc_btn_info );
 
         if( ! bsc_is_secured( $bsc_nonce_value, 'bsc_nonce', $post_id ) ) {
             return $post_id;
@@ -130,7 +128,7 @@ class Metabox {
             return $post_id;
         }
 
-        update_post_meta( $post_id, 'bsc_btn_info', $bsc_btn_info );
+        // update_post_meta( $post_id, 'bsc_btn_info', $bsc_btn_info );
         update_post_meta( $post_id, 'bsc_subtitle', $sub_title );
         update_post_meta( $post_id, 'bsc_offer', $bsc_offer );
     }

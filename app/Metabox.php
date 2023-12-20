@@ -56,7 +56,7 @@ class Metabox {
     public function bsc_metaboxes() {
         add_meta_box(
             'bsc_buton_meta',
-            __( 'Button Info', 'bsc' ),
+            __( 'Button Text', 'bsc' ),
             [ $this, 'bsc_post_meta' ],
             'bs_creator',
             'normal'
@@ -94,6 +94,22 @@ class Metabox {
         //meta box dom
         wp_nonce_field( 'bsc_nonce', 'bsc_nonce_field' );
         
+        ?>
+        <div class="bsc_button_metaboxes">
+            <div class="right-area">
+                <p class="single-row">  
+                    <label for="sub-title"><?php esc_html_e( 'Subtitle', 'bsc' ) ?></label><br>
+                    <input type="text" value="<?php esc_html_e( $sub_title_value , 'bsc' ); ?>" name="sub_title" id="sub_title">
+                </p>
+                <p>
+                </p>
+                <p class="single-row">
+                    <label for="bsc-offer"> <?php esc_html_e( 'Offer Title', 'bsc' ) ?> </label><br>
+                    <input type="text" value="<?php esc_html_e( $bsc_offer_value, 'bsc' ) ?>" name="bsc_offer" id="bsc-offer">
+                </p>
+            </div>
+        </div>
+        <?php
     }   
 
     /**
@@ -118,7 +134,6 @@ class Metabox {
         // $bsc_btn_info['bsc_btn_font_size']      = $_POST['bsc_btn_font_size'] ?? '';
         // $bsc_btn_info['bsc_btn_font_weight']    = $_POST['bsc_btn_font_weight'] ?? '';
         // $bsc_btn_info['bsc_btn_font-style']     = $_POST['bsc_btn_font-style'] ?? '';
-        
 
         if( ! bsc_is_secured( $bsc_nonce_value, 'bsc_nonce', $post_id ) ) {
             return $post_id;

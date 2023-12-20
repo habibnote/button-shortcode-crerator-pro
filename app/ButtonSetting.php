@@ -15,12 +15,12 @@ class ButtonSetting {
         <div class="bsc-setting-container">
             <div class="bsc-setting-left">
                 <ul>
-                    <Li>Setting</Li>
-                    <Li>Style</Li>
+                    <Li class="bsc-btn-setting">Setting</Li>
+                    <Li class="bsc-btn-style">Style</Li>
                 </ul>
             </div>
             <div class="bsc-setting-right-area">
-                
+
             </div>
         </div>
         <?php

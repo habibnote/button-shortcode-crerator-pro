@@ -13,8 +13,6 @@ class Admin {
     public function __construct() {
         add_action( 'init', [$this, 'register_post_type'] );
         add_action( 'admin_enqueue_scripts', [$this, 'admin_enqueue_scripts'] );
-        add_action( 'wp_ajax_bsc_add_button', [$this, 'bsc_add_button'] );
-        add_action( 'wp_ajax_bsc_remove_button', [$this, 'bsc_remove_button'] );
         add_action( 'admin_menu', [$this, 'setting_submenu'] );
 
         add_action( 'admin_init', [$this, 'duplicate_post_action'] );
@@ -86,61 +84,6 @@ class Admin {
             
         }
         return $actions;
-    }
-
-    /**
-     * Process remove button ajax request
-     */
-    public function bsc_remove_button() {
-        $post_id = $_POST['post_id'];
-        $nonce   = $_POST['nonce'];
-        $item_no = $_POST['item_no'];
-
-        if( wp_verify_nonce( $nonce, 'bsc_nonce_admin' ) ) {
-            
-            //get all meta
-            $bsc_btn_info = get_post_meta( $post_id, 'bsc_btn_info', true );
-
-            foreach( $bsc_btn_info as &$info ) {
-                unset( $info[$item_no] );
-            }
-
-            //reindex array
-            $bsc_btn_info = array_map( 'array_values' , $bsc_btn_info );
-
-            update_post_meta( $post_id, 'bsc_btn_info', $bsc_btn_info );
-
-            //update the btn quantity
-            $number_of_btn   = get_post_meta( $post_id, 'bsc_number_of_btn', true );
-            update_post_meta( $post_id, 'bsc_number_of_btn', $number_of_btn-1 );
-        }
-
-        wp_send_json_success();
-        // print_r( $bsc_btn_info );
-        die();
-    }
-
-    /**
-     * Process add button ajax requrest
-     */
-    public function bsc_add_button() {
-        $post_id = $_POST['post_id'];
-        $nonce   = $_POST['nonce'];
-
-        if( wp_verify_nonce( $nonce, 'bsc_nonce_admin' ) ) {
-            $current_btn_count = get_post_meta( $post_id, 'bsc_number_of_btn', true );
-
-            $update_value = $current_btn_count + 1;
-
-            update_post_meta( $post_id, 'bsc_number_of_btn', $update_value );
-            
-            wp_send_json_success([
-                'update' =>  $update_value,
-                'meta'   =>  get_post_meta( $post_id, 'bsc_number_of_btn', true ),
-            ]);
-            die();
-        }
-        
     }
 
     /**

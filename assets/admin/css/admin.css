@@ -1,0 +1,22 @@
+.bsc-setting-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.bsc-setting-left{
+    width: 10%;
+    border-right: 1px solid #ddd;
+}
+/* .bsc-setting-left ul{} */
+.bsc-setting-left ul li{
+    margin-bottom: 20px;
+    cursor: default;
+    font-weight: 600;
+    color: #939faa;
+}
+.bsc-setting-left ul li.bsc-active{
+    color: #3c434a;
+}
+.bsc-setting-right-area{
+    width: 88%;
+}

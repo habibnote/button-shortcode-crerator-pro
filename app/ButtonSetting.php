@@ -15,7 +15,7 @@ class ButtonSetting {
         <div class="bsc-setting-container">
             <div class="bsc-setting-left">
                 <ul>
-                    <Li class="bsc-btn-setting">Setting</Li>
+                    <Li class="bsc-btn-setting bsc-active">Setting</Li>
                     <Li class="bsc-btn-style">Style</Li>
                 </ul>
             </div>

@@ -52,6 +52,14 @@ class Metabox {
         );
 
         add_meta_box(
+            'bsc_buton_setting_meta',
+            __( 'Settings', 'bsc' ),
+            [ $this, 'bsc_setting_post_meta' ],
+            'bs_creator',
+            'normal'
+        );
+
+        add_meta_box(
             'bsc_button_shortcode',
             __( 'Button Shortcode', 'bsc' ),
             [$this, 'bsc_shortcode'],
@@ -67,6 +75,13 @@ class Metabox {
         echo "<pre>";
         printf( "[bsc_button id=%s/]", $post->ID );
         echo "</pre>";
+    }
+
+    /**
+     * all button setting field
+     */
+    public function bsc_setting_post_meta() {
+        (new ButtonSetting)->setting_meta();
     }
 
     /**

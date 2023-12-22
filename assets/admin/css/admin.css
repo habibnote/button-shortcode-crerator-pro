@@ -1,3 +1,7 @@
+.bsc_button_metaboxes input{
+    width: 100%;
+    border: 1px solid #ddd;
+}
 .bsc-setting-container{
     display: flex;
     align-items: flex-start;
@@ -66,7 +70,7 @@
     padding-left: 20px ;
 }
 .bsc-style-form{
-    display: hide;
+    display: none;
 }
 
 /*Form style*/
@@ -84,6 +88,9 @@
 }
 .bsc-column label{
     display: block;
+    color: #686868;
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 .bsc-column select{
     width: 100%;

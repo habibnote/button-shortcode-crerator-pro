@@ -20,10 +20,10 @@ class ButtonSetting {
                 </ul>
             </div>
             <div class="bsc-setting-right-area">
-                <div class="bsc-setting-container">
+                <div class="bsc-setting-form">
                     <?php ( new Self() )->setting_container(); ?>
                 </div>
-                <div class="bsc-style-container">
+                <div class="bsc-style-form">
                     <?php ( new Self() )->style_container(); ?>
                 </div>
             </div>
@@ -35,9 +35,12 @@ class ButtonSetting {
      * Setting container form
      */
     public function setting_container() {
-        ?>  
-            
-        <?php 
+            ?>
+                <div class="color-picker-single">
+                    <input type="text" id="custom_color_picker" value="#000000">
+                    <label for="custom_color_picker">Select Color</label>
+                </div>
+            <?php
     }
 
     /**

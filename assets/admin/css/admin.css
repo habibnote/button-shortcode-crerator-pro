@@ -19,3 +19,46 @@
 .bsc-setting-right-area{
     width: 88%;
 }
+
+/*Css for color picker*/
+.wp-color-result-text{
+    display: none;
+}
+.color-picker-single{
+    display: flex;
+    align-items: center;
+}
+.color-picker-single label{
+    display: inline-block;
+    padding: 5px;
+    background-color: #ddd;
+    border: 1px solid #b8b7b7;
+    border-radius: 0 3px 3px 0;
+}
+.wp-color-result{
+    width: 40px;
+    height: 31px;
+    border:none;
+    border-radius: 3px 0 0 3px !important;
+    outline: 0;
+}
+.wp-picker-input-wrap label{
+    padding:0;
+    border:none;
+    border: 1px solid #ddd;
+}
+.wp-picker-input-wrap input{
+    border:none;
+}
+.wp-picker-container{
+    position: relative;
+}
+.wp-picker-input-wrap{
+    z-index: 1000;
+    width: 270px;
+    position: absolute;
+}
+.wp-picker-holder{
+    z-index: 1000;
+    position: absolute;
+}

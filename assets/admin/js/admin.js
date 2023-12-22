@@ -9,4 +9,19 @@ jQuery(document).ready(function ($) {
 
     });
 
+   
+
+});
+
+jQuery(document).ready(function($){
+    $("#custom_color_picker").wpColorPicker({
+        defaultColor:'#000000',
+    });
+
+
+    $(document).on('click', '.wp-picker-container', function(){
+
+        console.log("Hello");
+    });
+
 });

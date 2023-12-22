@@ -37,6 +37,7 @@ class ButtonSetting {
     public function setting_container() {
         ?>
             <form class="bsc-form-wrapper">
+
                 <div class="bsc-single-row">
                     <div class="bsc-column">
                         <label for="bsc-btn-type">Type</label>
@@ -59,6 +60,44 @@ class ButtonSetting {
                         </select>
                     </div>
                 </div>
+
+                <div class="bsc-single-row">
+                    <div class="bsc-column">
+                        <label for="bsc-btn-text">Text</label>
+                        <input type="text" name="bsc-btn-appear" id="bsc-btn-appear" value="Text">
+                    </div>
+                </div>
+
+                <div class="bsc-single-row">
+
+                    <div class="bsc-column">
+                        <label for="bsc-item-type">Item Type</label>
+                        <select name="bsc-item-type" id="bsc-item-type">
+                            <option value="link">Link</option>
+                        </select>
+                    </div>
+
+                    <div class="bsc-column">
+                        <label for="bsc-btn-link">Link</label>
+                        <input type="text" name="bsc-btn-link" id="bsc-btn-link">
+                    </div>
+                    <div class="bsc-column">
+                        <label for="bsc-new-tab">Open a New Tab</label>
+                        <input type="checkbox" name="bsc-new-tab" id="bsc-new-tab">
+                    </div>
+                </div>
+
+                <div class="bsc-single-row">
+                    <div class="bsc-column">
+                        <label for="bsc-btn-class">Class</label>
+                        <input type="text" name="bsc-btn-class" id="bsc-btn-class">
+                    </div>
+                    <div class="bsc-column">
+                        <label for="bsc-btn-id">ID</label>
+                        <input type="text" name="bsc-btn-id" id="bsc-btn-id">
+                    </div>
+                </div>
+
             </form>
             <div class="color-picker-single">
                 <input type="text" id="custom_color_picker" value="#000000">

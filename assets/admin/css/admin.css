@@ -62,3 +62,35 @@
     z-index: 1000;
     position: absolute;
 }
+
+/*Form style*/
+/* .bsc-form-wrapper{
+    width: 100%;
+    padding: 20px 10px;
+} */
+.bsc-single-row{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin: 10px 0;
+}
+.bsc-column{
+    width: 30%;
+    margin-right: 4%;
+}
+.bsc-column:last-child{
+    margin-right: 0;
+}
+.bsc-column label{
+    display: block;
+}
+.bsc-column select{
+    width: 100%;
+    outline: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.bsc-column input{
+    width: 100%;
+    border: 1px solid #ddd;
+}

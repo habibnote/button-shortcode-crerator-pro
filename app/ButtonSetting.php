@@ -35,12 +35,36 @@ class ButtonSetting {
      * Setting container form
      */
     public function setting_container() {
-            ?>
-                <div class="color-picker-single">
-                    <input type="text" id="custom_color_picker" value="#000000">
-                    <label for="custom_color_picker">Select Color</label>
+        ?>
+            <form class="bsc-form-wrapper">
+                <div class="bsc-single-row">
+                    <div class="bsc-column">
+                        <label for="bsc-btn-type">Type</label>
+                        <select name="bsc-btn-type" id="bsc-btn-type">
+                            <option value="standard">Standard</option>
+                        </select>
+                    </div>
+                    <div class="bsc-column">
+                        <label for="bsc-btn-appear">Button Appearance</label>
+                        <select name="bsc-btn-appear" id="bsc-btn-appear">
+                            <option value="only-text">Only Text</option>
+                            <option value="only-icon">Only Icon</option>
+                            <option value="text-icon">Text & Icon</option>
+                        </select>
+                    </div>
+                    <div class="bsc-column">
+                        <label for="bsc-rotate-btn">Rotate Button</label>
+                        <select name="bsc-rotate-btn" id="bsc-rotate-btn">
+                            <option value="none">none</option>
+                        </select>
+                    </div>
                 </div>
-            <?php
+            </form>
+            <div class="color-picker-single">
+                <input type="text" id="custom_color_picker" value="#000000">
+                <label>Select Color</label>
+            </div>
+        <?php
     }
 
     /**
@@ -48,7 +72,7 @@ class ButtonSetting {
      */
     public function style_container() {
         ?>
-            
+
         <?php 
     }
 

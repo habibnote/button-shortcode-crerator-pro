@@ -61,11 +61,12 @@
     z-index: 1000;
     position: absolute;
 }
-
-
 .bsc-setting-right-area{
     border-left: 1px solid #ddd;
     padding-left: 20px ;
+}
+.bsc-style-form{
+    display: hide;
 }
 
 /*Form style*/

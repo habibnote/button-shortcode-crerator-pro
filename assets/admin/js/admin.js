@@ -17,7 +17,16 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function($){
-    $("#custom_color_picker").wpColorPicker({
+    $("#bsc-btn-color").wpColorPicker({
+        defaultColor:'#000000',
+    });
+    $("#bsc-btn-bg-color").wpColorPicker({
+        defaultColor:'#000000',
+    });
+    $("#bsc-btn-hover-color").wpColorPicker({
+        defaultColor:'#000000',
+    });
+    $("#bsc-btn-hover-bg-color").wpColorPicker({
         defaultColor:'#000000',
     });
 });

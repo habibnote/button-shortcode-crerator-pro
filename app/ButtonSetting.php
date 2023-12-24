@@ -105,9 +105,95 @@ class ButtonSetting {
      */
     public function style_container() {
         ?>
-            <div class="color-picker-single">
-                <input type="text" id="custom_color_picker" value="#000000">
-                <label>Select Color</label>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label for="bsc-btn-width">Width</label>
+                    <input type="text" name="bsc-btn-width" id="bsc-btn-width" value="100px">
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-btn-height">Height</label>
+                    <input type="text" name="bsc-btn-height" id="bsc-btn-height" value="50px">
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-btn-z_index">Z-index</label>
+                    <input type="text" name="bsc-btn-z_index" id="bsc-btn-z_index" value="Text">
+                </div>
+            </div>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label>Color</label>
+                    <div class="color-picker-single">
+                        <input type="text" name="bsc-btn-color" id="bsc-btn-color" value="#000000">
+                        <label class="bsc-label">Select Color</label>
+                    </div>
+                </div>
+                <div class="bsc-column">
+                    <label>Background</label>
+                    <div class="color-picker-single">
+                        <input type="text" name="bsc-btn-bg-color" id="bsc-btn-bg-color" value="#000000">
+                        <label class="bsc-label">Select Color</label>
+                    </div>
+                </div>
+            </div>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label>Hover Color</label>
+                    <div class="color-picker-single">
+                        <input type="text" name="bsc-btn-hover-color" id="bsc-btn-hover-color" value="#000000">
+                        <label class="bsc-label">Select Color</label>
+                    </div>
+                </div>
+                <div class="bsc-column">
+                    <label>Hover Background</label>
+                    <div class="color-picker-single">
+                        <input type="text" name="bsc-btn-hover-bg-color" id="bsc-btn-hover-bg-color" value="#000000">
+                        <label class="bsc-label">Select Color</label>
+                    </div>
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-hover-effect">Hover Effect</label>
+                    <select name="bsc-hover-effec" id="bsc-hover-effec">
+                        <option value="none">none</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label for="bsc-border-radius">Radius</label>
+                    <input type="text" name="bsc-border-radius" id="bsc-border-radius" value="Text">
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-style">Style</label>
+                    <select name="bsc-style" id="bsc-style">
+                        <option value="none">none</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label for="bsc-shadow">Shadow</label>
+                    <select name="bsc-shadow" id="bsc-shadow">
+                        <option value="none">none</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bsc-single-row">
+                <div class="bsc-column">
+                    <label for="bsc-btn-font-size">Font Size</label>
+                    <input type="text" name="bsc-btn-font-size" id="bsc-btn-font-size" value="16">
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-font-weight">Font Weight</label>
+                    <select name="bsc-font-weight" id="bsc-font-weight">
+                        <option value="none">none</option>
+                    </select>
+                </div>
+                <div class="bsc-column">
+                    <label for="bsc-font-style">Font Style</label>
+                    <select name="bsc-font-style" id="bsc-font-style">
+                        <option value="none">none</option>
+                    </select>
+                </div>
             </div>
         <?php 
     }

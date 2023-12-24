@@ -93,6 +93,9 @@
     font-size: 13px;
     margin-bottom: 5px;
 }
+.bsc-label{
+    margin: 0 !important;
+}
 .bsc-column select{
     width: 100%;
     outline: 0;

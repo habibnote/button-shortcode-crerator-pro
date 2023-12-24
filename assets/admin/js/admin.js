@@ -14,8 +14,6 @@ jQuery(document).ready(function ($) {
         $('.bsc-style-form').hide();
     });
 
-   
-
 });
 
 jQuery(document).ready(function($){

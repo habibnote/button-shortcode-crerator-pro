@@ -55,6 +55,7 @@
 }
 .wp-picker-container{
     position: relative;
+    margin: 0 !important;
 }
 .wp-picker-input-wrap{
     z-index: 1000;

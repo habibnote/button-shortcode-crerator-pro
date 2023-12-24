@@ -130,7 +130,7 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label>Background</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-bg-color" id="bsc-btn-bg-color" value="#000000">
+                        <input type="text" name="bsc-btn-bg-color" id="bsc-btn-bg-color" value="#1e73be">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label>Hover Background</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-hover-bg-color" id="bsc-btn-hover-bg-color" value="#000000">
+                        <input type="text" name="bsc-btn-hover-bg-color" id="bsc-btn-hover-bg-color" value="#1e73be">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>

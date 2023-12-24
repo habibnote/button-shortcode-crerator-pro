@@ -21,12 +21,12 @@ jQuery(document).ready(function($){
         defaultColor:'#000000',
     });
     $("#bsc-btn-bg-color").wpColorPicker({
-        defaultColor:'#000000',
+        defaultColor:'#1e73be',
     });
     $("#bsc-btn-hover-color").wpColorPicker({
         defaultColor:'#000000',
     });
     $("#bsc-btn-hover-bg-color").wpColorPicker({
-        defaultColor:'#000000',
+        defaultColor:'#1e73be',
     });
 });

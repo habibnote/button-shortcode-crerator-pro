@@ -63,14 +63,25 @@ class Shortcode {
                             printf(
                                 "<style>
                                     .bsc-btn_001{
-                                        width: %1spx;
-                                        height: %2spx;
+                                        width: %spx;
+                                        height: %spx;
+                                        color: %s;
+                                        background-color:%s;
+                                        border-radius: %spx;
+                                    }
+                                    .bsc-btn_001:hover{
+                                        color: %s;
+                                        background-color:%s;
                                     }
                                 </style>",
-                                100,
-                                50
-                                // $bsc_btn_style_setting['bsc_btn_width'],
-                                // $bsc_btn_style_setting['bsc_btn_height'],
+                                $bsc_btn_style_setting['bsc_btn_width'],
+                                $bsc_btn_style_setting['bsc_btn_height'],
+                                $bsc_btn_style_setting['bsc_btn_color'],
+                                $bsc_btn_style_setting['bsc_btn_bg_color'],
+                                $bsc_btn_style_setting['bsc_border_radius'],
+
+                                $bsc_btn_style_setting['bsc_btn_hover_color'],
+                                $bsc_btn_style_setting['bsc_btn_hover_bg_color'],
                             );
                         ?>
                     </div>

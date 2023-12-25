@@ -124,16 +124,48 @@ class Metabox {
         $sub_title       = $_POST['sub_title'] ?? '';
         $bsc_offer       = $_POST['bsc_offer'] ?? '';
 
+        /**
+         * Retrive btn settings data
+         */
+        $bsc_btn_type   = $_POST['bsc-btn-type'] ?? '';
+        $bsc_btn_appear = $_POST['bsc-btn-appear'] ?? '';
+        $bsc_rotate_btn = $_POST['bsc-rotate-btn'] ?? '';
+        $bsc_btn_text   = $_POST['bsc-btn-text'] ?? '';
+        $bsc_item_type  = $_POST['bsc-item-type'] ?? '';
+        $bsc_btn_link   = $_POST['bsc-btn-link'] ?? '';
+        $bsc_new_tab    = $_POST['bsc-new-tab'] ?? '';
+        $bsc_btn_class  = $_POST['bsc-btn-class'] ?? '';
+        $bsc_btn_id     = $_POST['bsc-btn-id'] ?? '';
+
+        /**
+         * Retrive all style data
+         */
+
+        //Intialize button setting and style array
+        $bsc_btn_style_setting = [];
+
+        //set all button meta into a single array
+        $bsc_btn_style_setting['bsc_btn_type']      = $bsc_btn_type;
+        $bsc_btn_style_setting['bsc_btn_appear']   = $bsc_btn_appear;
+        $bsc_btn_style_setting['bsc_rotate_btn']   = $bsc_rotate_btn;
+        $bsc_btn_style_setting['bsc_btn_text']     = $bsc_btn_text;
+        $bsc_btn_style_setting['bsc_item_type']    = $bsc_item_type;
+        $bsc_btn_style_setting['bsc_btn_link']     = $bsc_btn_link;
+        $bsc_btn_style_setting['bsc_new_tab']      = $bsc_new_tab;
+        $bsc_btn_style_setting['bsc_btn_class']    = $bsc_btn_class;
+        $bsc_btn_style_setting['bsc_btn_id']       = $bsc_btn_id;
+
         if( ! bsc_is_secured( $bsc_nonce_value, 'bsc_nonce', $post_id ) ) {
             return $post_id;
         }   
 
-        if( in_array( '', [ $sub_title, $bsc_offer ] ) ) {
+        if( in_array( '', [ $sub_title, $bsc_offer] ) ) {
             return $post_id;
         }
 
         update_post_meta( $post_id, 'bsc_subtitle', $sub_title );
         update_post_meta( $post_id, 'bsc_offer', $bsc_offer );
+        update_post_meta( $post_id, 'bsc_btn_style_settoing', $bsc_btn_style_setting );
     }
 }
 

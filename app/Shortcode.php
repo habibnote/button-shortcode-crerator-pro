@@ -55,7 +55,7 @@ class Shortcode {
                             printf(
                                 "<a href='%s'>Hello</a>",
                                 '#'
-                            )
+                            );
                         ?>
                     </div>
                 </div>

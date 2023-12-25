@@ -64,7 +64,7 @@ class ButtonSetting {
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-btn-text">Text</label>
-                    <input type="text" name="bsc-btn-appear" id="bsc-btn-appear" value="Text">
+                    <input type="text" name="bsc-btn-text" id="bsc-btn-text" value="Text">
                 </div>
             </div>
 

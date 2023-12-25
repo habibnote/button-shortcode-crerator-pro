@@ -64,7 +64,7 @@ class ButtonSetting {
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-btn-text">Text</label>
-                    <input type="text" name="bsc-btn-text" id="bsc-btn-text" value="Text">
+                    <input type="text" name="bsc-btn-text" id="bsc-btn-text" value="<?php echo $bsc_btn_style_setting['bsc_btn_text'] ?? 'Text' ?>">
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ class ButtonSetting {
 
                 <div class="bsc-column">
                     <label for="bsc-btn-link">Link</label>
-                    <input type="text" name="bsc-btn-link" id="bsc-btn-link">
+                    <input type="text" name="bsc-btn-link" id="bsc-btn-link" value="<?php echo $bsc_btn_style_setting['bsc_btn_link'] ?? '' ?>">
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-new-tab">Open a New Tab</label>
@@ -90,11 +90,11 @@ class ButtonSetting {
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-btn-class">Class</label>
-                    <input type="text" name="bsc-btn-class" id="bsc-btn-class">
+                    <input type="text" name="bsc-btn-class" id="bsc-btn-class" value="<?php echo $bsc_btn_style_setting['bsc_btn_class'] ?? '' ?>">
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-btn-id">ID</label>
-                    <input type="text" name="bsc-btn-id" id="bsc-btn-id">
+                    <input type="text" name="bsc-btn-id" id="bsc-btn-id" value="<?php echo $bsc_btn_style_setting['bsc_btn_id'] ?? '' ?>">
                 </div>
             </div>
         <?php

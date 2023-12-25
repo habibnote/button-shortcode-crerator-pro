@@ -42,14 +42,20 @@ class Shortcode {
                         ?>
                     </div>
                     <div class="bsc-content">
-                        <h2><?php the_title(); ?></h2>
                         <?php
                             if( $sub_title ) {
-                                printf( '<h3>%s</h3>', $sub_title );
+                                printf( '<h3 class="%s">%s</h3>', 'bsc_sub_title', $sub_title );
                             }
+                            printf( '<h2 class="%s">%s</h2>', 'bsc_title', get_the_title( $post_id ) );
                             if( $bsc_offer ) {
-                                printf( '<h4>%s</h4>', $bsc_offer );
+                                printf( '<h4 class="%s">%s</h4>', 'bsc_offer_title', $bsc_offer );
                             }
+                        ?>
+                        <?php 
+                            printf(
+                                "<a href='%s'>Hello</a>",
+                                '#'
+                            )
                         ?>
                     </div>
                 </div>

@@ -160,8 +160,8 @@ class ButtonSetting {
             </div>
             <div class="bsc-single-row">
                 <div class="bsc-column">
-                    <label for="bsc-border-radius">Radius</label>
-                    <input type="text" name="bsc-border-radius" id="bsc-border-radius" value="Text">
+                    <label for="bsc-border-radius">Radius(px)</label>
+                    <input type="text" name="bsc-border-radius" id="bsc-border-radius" value="<?php echo $bsc_btn_style_setting['bsc_border_radius'] ?? 10 ?>">
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-style">Style</label>
@@ -181,7 +181,7 @@ class ButtonSetting {
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-btn-font-size">Font Size</label>
-                    <input type="text" name="bsc-btn-font-size" id="bsc-btn-font-size" value="16">
+                    <input type="text" name="bsc-btn-font-size" id="bsc-btn-font-size" value="<?php echo $bsc_btn_style_setting['bsc_btn_font_size'] ?? 16 ?>">
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-font-weight">Font Weight</label>

@@ -152,7 +152,7 @@ class ButtonSetting {
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-hover-effect">Hover Effect</label>
-                    <select name="bsc-hover-effec" id="bsc-hover-effec">
+                    <select name="bsc-hover-effect" id="bsc-hover-effect">
                         <option value="none">none</option>
                     </select>
                 </div>

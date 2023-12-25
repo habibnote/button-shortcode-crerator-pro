@@ -140,11 +140,25 @@ class Metabox {
         /**
          * Retrive all style data
          */
+        $bsc_btn_width      = $_POST['bsc-btn-width'] ?? '';
+        $bsc_btn_height     = $_POST['bsc-btn-height'] ?? '';
+        $bsc_btn_z_index    = $_POST['bsc-btn-z_index'] ?? '';
+        $bsc_btn_color      = $_POST['bsc-btn-color'] ?? '';
+        $bsc_btn_bg_color   = $_POST['bsc-btn-bg-color'] ?? '';
+        $bsc_btn_hover_color = $_POST['bsc-btn-hover-color'] ?? '';
+        $bsc_btn_hover_bg_color = $_POST['bsc-btn-hover-bg-color'] ?? '';
+        $bsc_hover_effect   = $_POST['bsc-hover-effect'] ?? '';
+        $bsc_border_radius  = $_POST['bsc-border-radius'] ?? '';
+        $bsc_style          = $_POST['bsc-style'] ?? '';
+        $bsc_shadow         = $_POST['bsc-shadow'] ?? '';
+        $bsc_btn_font_size  = $_POST['bsc-btn-font-size'] ?? '';
+        $bsc_font_weight    = $_POST['bsc-font-weight'] ?? '';
+        $bsc_font_style     = $_POST['bsc-font-style'] ?? '';
 
         //Intialize button setting and style array
         $bsc_btn_style_setting = [];
 
-        //set all button meta into a single array
+        //set all button setting meta in array
         $bsc_btn_style_setting['bsc_btn_type']      = $bsc_btn_type;
         $bsc_btn_style_setting['bsc_btn_appear']   = $bsc_btn_appear;
         $bsc_btn_style_setting['bsc_rotate_btn']   = $bsc_rotate_btn;
@@ -154,6 +168,22 @@ class Metabox {
         $bsc_btn_style_setting['bsc_new_tab']      = $bsc_new_tab;
         $bsc_btn_style_setting['bsc_btn_class']    = $bsc_btn_class;
         $bsc_btn_style_setting['bsc_btn_id']       = $bsc_btn_id;
+
+        //set all button style meta in array
+        $bsc_btn_style_setting['bsc_btn_width']    = $bsc_btn_width;
+        $bsc_btn_style_setting['bsc_btn_height']   = $bsc_btn_height;
+        $bsc_btn_style_setting['bsc_btn_z_index']  = $bsc_btn_z_index;
+        $bsc_btn_style_setting['bsc_btn_color']    = $bsc_btn_color;
+        $bsc_btn_style_setting['bsc_btn_bg_color'] = $bsc_btn_bg_color;
+        $bsc_btn_style_setting['bsc_btn_hover_color'] = $bsc_btn_hover_color;
+        $bsc_btn_style_setting['bsc_btn_hover_bg_color'] = $bsc_btn_hover_bg_color;
+        $bsc_btn_style_setting['bsc_hover_effect']  = $bsc_hover_effect;
+        $bsc_btn_style_setting['bsc_border_radius'] = $bsc_border_radius;
+        $bsc_btn_style_setting['bsc_style']         = $bsc_style;
+        $bsc_btn_style_setting['bsc_shadow']        = $bsc_shadow;
+        $bsc_btn_style_setting['bsc_btn_font_size'] = $bsc_btn_font_size;
+        $bsc_btn_style_setting['bsc_font_weight']   = $bsc_font_weight;
+        $bsc_btn_style_setting['bsc_font_style']    = $bsc_font_style;
 
         if( ! bsc_is_secured( $bsc_nonce_value, 'bsc_nonce', $post_id ) ) {
             return $post_id;

@@ -195,7 +195,7 @@ class Metabox {
 
         update_post_meta( $post_id, 'bsc_subtitle', $sub_title );
         update_post_meta( $post_id, 'bsc_offer', $bsc_offer );
-        update_post_meta( $post_id, 'bsc_btn_style_settoing', $bsc_btn_style_setting );
+        update_post_meta( $post_id, 'bsc_btn_style_setting', $bsc_btn_style_setting );
     }
 }
 

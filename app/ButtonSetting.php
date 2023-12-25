@@ -23,7 +23,7 @@ class ButtonSetting {
             <div class="bsc-setting-right-area">
                 <form>
                     <div class="bsc-setting-form">
-                        <?php ( new Self(  ) )->setting_container( $post_id ); ?>
+                        <?php ( new Self() )->setting_container( $post_id ); ?>
                     </div>
                     <div class="bsc-style-form">
                         <?php ( new Self() )->style_container( $post_id ); ?>
@@ -38,6 +38,7 @@ class ButtonSetting {
      * Setting container form
      */
     public function setting_container( $post_id ) {
+        $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
         ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
@@ -103,6 +104,7 @@ class ButtonSetting {
      * Style container form
      */
     public function style_container( $post_id ) {
+        $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
         ?>
             <div class="bsc-single-row">
                 <div class="bsc-column">

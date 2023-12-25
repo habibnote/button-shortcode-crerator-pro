@@ -6,11 +6,12 @@ namespace Habib\Button_Shortcode_Creator\App;
  * Main Class
  */
 class ButtonSetting {
-    
+
     /**
      * all setting meta field
      */
-    public function setting_meta () {
+    public function setting_meta ( $post ) {
+        $post_id = $post->ID;
         ?>
         <div class="bsc-setting-container">
             <div class="bsc-setting-left">
@@ -22,10 +23,10 @@ class ButtonSetting {
             <div class="bsc-setting-right-area">
                 <form>
                     <div class="bsc-setting-form">
-                        <?php ( new Self() )->setting_container(); ?>
+                        <?php ( new Self(  ) )->setting_container( $post_id ); ?>
                     </div>
                     <div class="bsc-style-form">
-                        <?php ( new Self() )->style_container(); ?>
+                        <?php ( new Self() )->style_container( $post_id ); ?>
                     </div>
                 </form>
             </div>
@@ -36,8 +37,8 @@ class ButtonSetting {
     /***
      * Setting container form
      */
-    public function setting_container() {
-        ?>
+    public function setting_container( $post_id ) {
+        ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-btn-type">Type</label>
@@ -49,8 +50,6 @@ class ButtonSetting {
                     <label for="bsc-btn-appear">Button Appearance</label>
                     <select name="bsc-btn-appear" id="bsc-btn-appear">
                         <option value="only-text">Only Text</option>
-                        <option value="only-icon">Only Icon</option>
-                        <option value="text-icon">Text & Icon</option>
                     </select>
                 </div>
                 <div class="bsc-column">
@@ -103,7 +102,7 @@ class ButtonSetting {
     /**
      * Style container form
      */
-    public function style_container() {
+    public function style_container( $post_id ) {
         ?>
             <div class="bsc-single-row">
                 <div class="bsc-column">

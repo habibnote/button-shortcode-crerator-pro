@@ -80,8 +80,8 @@ class Metabox {
     /**
      * all button setting field
      */
-    public function bsc_setting_post_meta() {
-        (new ButtonSetting)->setting_meta();
+    public function bsc_setting_post_meta( $post ) {
+        ( new ButtonSetting() )->setting_meta( $post );
     }
 
     /**

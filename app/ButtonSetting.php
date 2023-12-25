@@ -118,21 +118,20 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-btn-z_index">Z-index</label>
                     <input type="text" name="bsc-btn-z_index" id="bsc-btn-z_index" value="<?php echo $bsc_btn_style_setting['bsc_btn_z_index'] ?? 1000 ?>">
-                </div>">
                 </div>
             </div>
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label>Color</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-color" id="bsc-btn-color" value="#000000">
+                        <input type="text" name="bsc-btn-color" id="bsc-btn-color" value="<?php echo $bsc_btn_style_setting['bsc_btn_color'] ?? '#000000' ?>">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>
                 <div class="bsc-column">
                     <label>Background</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-bg-color" id="bsc-btn-bg-color" value="#1e73be">
+                        <input type="text" name="bsc-btn-bg-color" id="bsc-btn-bg-color" value="<?php echo $bsc_btn_style_setting['bsc_btn_bg_color'] ?? '#1e73be' ?>">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>
@@ -141,14 +140,14 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label>Hover Color</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-hover-color" id="bsc-btn-hover-color" value="#000000">
+                        <input type="text" name="bsc-btn-hover-color" id="bsc-btn-hover-color" value="<?php echo $bsc_btn_style_setting['bsc_btn_hover_color'] ?? '#000000' ?>">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>
                 <div class="bsc-column">
                     <label>Hover Background</label>
                     <div class="color-picker-single">
-                        <input type="text" name="bsc-btn-hover-bg-color" id="bsc-btn-hover-bg-color" value="#1e73be">
+                        <input type="text" name="bsc-btn-hover-bg-color" id="bsc-btn-hover-bg-color" value="<?php echo $bsc_btn_style_setting['bsc_btn_hover_bg_color'] ?? '#1e73be' ?>">
                         <label class="bsc-label">Select Color</label>
                     </div>
                 </div>

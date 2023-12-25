@@ -108,16 +108,17 @@ class ButtonSetting {
         ?>
             <div class="bsc-single-row">
                 <div class="bsc-column">
-                    <label for="bsc-btn-width">Width</label>
-                    <input type="text" name="bsc-btn-width" id="bsc-btn-width" value="100px">
+                    <label for="bsc-btn-width">Width(px)</label>
+                    <input type="text" name="bsc-btn-width" id="bsc-btn-width" value="<?php echo $bsc_btn_style_setting['bsc_btn_width'] ?? 100 ?>">
                 </div>
                 <div class="bsc-column">
-                    <label for="bsc-btn-height">Height</label>
-                    <input type="text" name="bsc-btn-height" id="bsc-btn-height" value="50px">
+                    <label for="bsc-btn-height">Height(px)</label>
+                    <input type="text" name="bsc-btn-height" id="bsc-btn-height" value="<?php echo $bsc_btn_style_setting['bsc_btn_height'] ?? 50 ?>">
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-btn-z_index">Z-index</label>
-                    <input type="text" name="bsc-btn-z_index" id="bsc-btn-z_index" value="Text">
+                    <input type="text" name="bsc-btn-z_index" id="bsc-btn-z_index" value="<?php echo $bsc_btn_style_setting['bsc_btn_z_index'] ?? 1000 ?>">
+                </div>">
                 </div>
             </div>
             <div class="bsc-single-row">

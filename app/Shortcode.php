@@ -21,7 +21,6 @@ class Shortcode {
      */
     public function button_shortcode( $atts ) {
         $post_id = $atts['id'];
-
         // Get post object by post ID
         $post = get_post($post_id);
 
@@ -32,6 +31,7 @@ class Shortcode {
             $sub_title      = get_post_meta( $post_id, 'bsc_subtitle', true );
             $bsc_offer      = get_post_meta( $post_id, 'bsc_offer', true );
 
+            $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
             ?>
                 <div class="bsc-container">
                     <div class="bsc-image">
@@ -53,8 +53,24 @@ class Shortcode {
                         ?>
                         <?php 
                             printf(
-                                "<a href='%s'>Hello</a>",
-                                '#'
+                                "<a class='bsc-btn_001' href='%s'>%s</a>",
+                                $bsc_btn_style_setting['bsc_btn_link'],
+                                $bsc_btn_style_setting['bsc_btn_text']
+                            );
+                            /**
+                             * Print all css
+                             */
+                            printf(
+                                "<style>
+                                    .bsc-btn_001{
+                                        width: %1spx;
+                                        height: %2spx;
+                                    }
+                                </style>",
+                                100,
+                                50
+                                // $bsc_btn_style_setting['bsc_btn_width'],
+                                // $bsc_btn_style_setting['bsc_btn_height'],
                             );
                         ?>
                     </div>

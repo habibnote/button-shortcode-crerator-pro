@@ -42,27 +42,6 @@ class ButtonSetting {
         ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
-                    <label for="bsc-btn-type">Type</label>
-                    <select name="bsc-btn-type" id="bsc-btn-type">
-                        <option value="standard">Standard</option>
-                    </select>
-                </div>
-                <div class="bsc-column">
-                    <label for="bsc-btn-appear">Button Appearance</label>
-                    <select name="bsc-btn-appear" id="bsc-btn-appear">
-                        <option value="only-text">Only Text</option>
-                    </select>
-                </div>
-                <div class="bsc-column">
-                    <label for="bsc-rotate-btn">Rotate Button</label>
-                    <select name="bsc-rotate-btn" id="bsc-rotate-btn">
-                        <option value="none">none</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="bsc-single-row">
-                <div class="bsc-column">
                     <label for="bsc-btn-text">Text</label>
                     <input type="text" name="bsc-btn-text" id="bsc-btn-text" value="<?php echo $bsc_btn_style_setting['bsc_btn_text'] ?? 'Text' ?>">
                 </div>

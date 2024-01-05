@@ -127,9 +127,6 @@ class Metabox {
         /**
          * Retrive btn settings data
          */
-        $bsc_btn_type   = $_POST['bsc-btn-type'] ?? '';
-        $bsc_btn_appear = $_POST['bsc-btn-appear'] ?? '';
-        $bsc_rotate_btn = $_POST['bsc-rotate-btn'] ?? '';
         $bsc_btn_text   = $_POST['bsc-btn-text'] ?? '';
         $bsc_item_type  = $_POST['bsc-item-type'] ?? '';
         $bsc_btn_link   = $_POST['bsc-btn-link'] ?? '';
@@ -159,9 +156,6 @@ class Metabox {
         $bsc_btn_style_setting = [];
 
         //set all button setting meta in array
-        $bsc_btn_style_setting['bsc_btn_type']      = $bsc_btn_type;
-        $bsc_btn_style_setting['bsc_btn_appear']   = $bsc_btn_appear;
-        $bsc_btn_style_setting['bsc_rotate_btn']   = $bsc_rotate_btn;
         $bsc_btn_style_setting['bsc_btn_text']     = $bsc_btn_text;
         $bsc_btn_style_setting['bsc_item_type']    = $bsc_item_type;
         $bsc_btn_style_setting['bsc_btn_link']     = $bsc_btn_link;

@@ -36,19 +36,19 @@ class Admin {
 
     public function setting_callback() {
         ?>
-        <div class="wrap">
-            <h1>Settings</h1>
+        <div class="wrap bsc-license-page">
+            <h1>Plugin License Options</h1>
             <hr>
-            <p>To use this plugin you need to acitve it first</p>
-            
+            <p class="bsc-message">Please active your license key to make the plugin work.</p>
             <div class="bsc-license_form">
                 <form>
                     <p>
                         <label for="bsc-ls-website">License Key:</label>
                         <input type="text"/>
+                        <span>Please Enter Your Pro Plugin Activation Key</span>
                     </p>
                     <p>
-                        <button class="button button-primary">Active</button>
+                        <button class="bsc-active-btn button button-primary">Active</button>
                     </p>
                 </form>
             </div>

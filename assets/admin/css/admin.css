@@ -109,3 +109,32 @@
     width: 100%;
     border: 1px solid #ddd;
 }
+
+
+/*License page*/
+.bsc-license-page{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.bsc-message{
+    font-size: 14px;
+    color: #787878;
+}
+.bsc-license_form label{
+    font-size: 18px;
+}
+.bsc-license_form input{
+    width: 500px;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+    outline: 0;
+}
+.bsc-license_form span{
+    color: #939393;
+    font-size: 13px;
+    font-style: italic;
+}
+.bsc-active-btn{
+    padding: 3px 35px !important;
+}

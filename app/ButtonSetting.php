@@ -142,12 +142,6 @@ class ButtonSetting {
                     <label for="bsc-border-radius">Radius(px)</label>
                     <input type="text" name="bsc-border-radius" id="bsc-border-radius" value="<?php echo $bsc_btn_style_setting['bsc_border_radius'] ?? 10 ?>">
                 </div>
-                <div class="bsc-column">
-                    <label for="bsc-style">Style</label>
-                    <select name="bsc-style" id="bsc-style">
-                        <option value="none">none</option>
-                    </select>
-                </div>
             </div>
             <div class="bsc-single-row">
                 <div class="bsc-column">

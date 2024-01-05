@@ -146,7 +146,6 @@ class Metabox {
         $bsc_btn_hover_bg_color = $_POST['bsc-btn-hover-bg-color'] ?? '';
         $bsc_hover_effect   = $_POST['bsc-hover-effect'] ?? '';
         $bsc_border_radius  = $_POST['bsc-border-radius'] ?? '';
-        $bsc_style          = $_POST['bsc-style'] ?? '';
         $bsc_shadow         = $_POST['bsc-shadow'] ?? '';
         $bsc_btn_font_size  = $_POST['bsc-btn-font-size'] ?? '';
         $bsc_font_weight    = $_POST['bsc-font-weight'] ?? '';
@@ -173,7 +172,6 @@ class Metabox {
         $bsc_btn_style_setting['bsc_btn_hover_bg_color'] = $bsc_btn_hover_bg_color;
         $bsc_btn_style_setting['bsc_hover_effect']  = $bsc_hover_effect;
         $bsc_btn_style_setting['bsc_border_radius'] = $bsc_border_radius;
-        $bsc_btn_style_setting['bsc_style']         = $bsc_style;
         $bsc_btn_style_setting['bsc_shadow']        = $bsc_shadow;
         $bsc_btn_style_setting['bsc_btn_font_size'] = $bsc_btn_font_size;
         $bsc_btn_style_setting['bsc_font_weight']   = $bsc_font_weight;

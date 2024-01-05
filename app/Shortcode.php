@@ -32,6 +32,7 @@ class Shortcode {
             $bsc_offer      = get_post_meta( $post_id, 'bsc_offer', true );
 
             $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
+
             ?>
                 <div class="bsc-container">
                     <div class="bsc-image">
@@ -53,7 +54,9 @@ class Shortcode {
                         ?>
                         <?php 
                             printf(
-                                "<a class='bsc-btn_001' href='%s'>%s</a>",
+                                "<a class='bsc-btn_001 %s' id='%s' href='%s'>%s</a>",
+                                $bsc_btn_style_setting['bsc_btn_class'],
+                                $bsc_btn_style_setting['bsc_btn_id'],
                                 $bsc_btn_style_setting['bsc_btn_link'],
                                 $bsc_btn_style_setting['bsc_btn_text']
                             );

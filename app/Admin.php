@@ -17,6 +17,8 @@ class Admin {
 
         add_action( 'admin_init', [$this, 'duplicate_post_action'] );
         add_filter( 'post_row_actions', [$this, 'add_duplicate_link_before_trash'], 10, 2 );
+
+        add_action( 'admin_notices', [$this,'activate_notice'] );
     }
 
     /**
@@ -96,7 +98,7 @@ class Admin {
     /*
     * load all admin assets
     */
-   public function admin_enqueue_scripts() {
+    public function admin_enqueue_scripts() {
         wp_enqueue_style( 'admin', BSC_ASSET . '/admin/css/admin.css', '', time(), 'all' );
 
         wp_enqueue_script( 'admin', BSC_ASSET . '/admin/js/admin.js', ['jquery', 'wp-color-picker'], time(), true );
@@ -107,5 +109,29 @@ class Admin {
             'ajax'  => $ajax_url,
             'admin_nonce'=> $nonce,
         ) );
-   }   
+    }   
+
+    /**
+     * Admin Activate notice
+     */
+    public function activate_notice() {
+        if ( current_user_can( 'manage_options' ) ) {
+            ?>
+                <div class="notice notice-success is-dismissible">
+                    <p>
+                        <?php 
+                            $bsc_setting_url = add_query_arg( array(
+                                'post_type' => 'bs_creator',
+                                'page'      => 'bsc_settings',
+                            ), admin_url( 'edit.php' ) );
+
+                            _e( 'Button Shortcode Creator. It\'s a pro Plugin', 'bsc' );
+
+                            printf( ' <a href="%s">%s</a>', $bsc_setting_url, __( 'Active now' , 'bsc' ) );
+                        ?>
+                    </p>
+                </div>
+            <?php
+        }
+    }
 }

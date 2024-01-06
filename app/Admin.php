@@ -117,7 +117,7 @@ class Admin {
     public function activate_notice() {
         if ( current_user_can( 'manage_options' ) ) {
             ?>
-                <div class="notice notice-success is-dismissible">
+                <div class="notice notice-error is-dismissible">
                     <p>
                         <?php 
                             $bsc_setting_url = add_query_arg( array(

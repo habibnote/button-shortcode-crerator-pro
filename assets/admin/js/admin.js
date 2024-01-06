@@ -14,11 +14,28 @@ jQuery(document).ready(function ($) {
         $('.bsc-style-form').hide();
     });
 
+    // console.log(BSC.ajax);
+
     /**
      * Ajax call for license activeated
      */
     $(document).on('click', '#bsc-license_actived-btn', function(){
-        
+
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: BSC.ajax,
+            data: {
+                action: 'bsc_admin_ajax',
+                nonce: BSC.admin_nonce,
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            // error: function (error) {
+            //     console.log(error);
+            // },
+        });
     });
 
 });

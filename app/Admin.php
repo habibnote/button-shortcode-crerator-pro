@@ -19,6 +19,15 @@ class Admin {
         add_filter( 'post_row_actions', [$this, 'add_duplicate_link_before_trash'], 10, 2 );
 
         add_action( 'admin_notices', [$this,'activate_notice'] );
+        add_action( 'wp_ajax_bsc_admin_ajax', [$this, 'bsc_ajax'] );
+    }
+
+    /**
+     * Process Ajax request
+     */
+    public function bsc_ajax() {
+        echo "Hello";
+        // die;
     }
 
     /**

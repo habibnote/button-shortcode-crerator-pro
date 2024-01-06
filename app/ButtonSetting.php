@@ -16,8 +16,8 @@ class ButtonSetting {
         <div class="bsc-setting-container">
             <div class="bsc-setting-left">
                 <ul>
-                    <Li class="bsc-btn-setting bsc-active">Setting</Li>
-                    <Li class="bsc-btn-style">Style</Li>
+                    <Li class="bsc-btn-setting bsc-active"><?php esc_html_e( 'Setting', 'bsc' ) ?></Li>
+                    <Li class="bsc-btn-style"><?php esc_html_e( 'Style', 'bsc' ) ?></Li>
                 </ul>
             </div>
             <div class="bsc-setting-right-area">
@@ -42,7 +42,7 @@ class ButtonSetting {
         ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
-                    <label for="bsc-btn-text">Text</label>
+                    <label for="bsc-btn-text"><?php esc_html_e( 'Text', 'bsc' ) ?></label>
                     <input type="text" name="bsc-btn-text" id="bsc-btn-text" value="<?php echo $bsc_btn_style_setting['bsc_btn_text'] ?? 'Text' ?>">
                 </div>
             </div>

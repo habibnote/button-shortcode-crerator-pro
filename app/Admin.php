@@ -36,6 +36,9 @@ class Admin {
         );
     }
 
+    /**
+     * Setting page callback function
+     */
     public function setting_callback() {
         ?>
         <div class="wrap bsc-license-page">

@@ -20,7 +20,8 @@ jQuery(document).ready(function ($) {
      * Ajax call for license activeated
      */
     $(document).on('click', '#bsc-license_actived-btn', function(){
-
+        let bscLicenseKeyValue = $('#bsc-license-key-input').val();
+        
         $.ajax({
             type: 'post',
             dataType: 'json',
@@ -28,13 +29,14 @@ jQuery(document).ready(function ($) {
             data: {
                 action: 'bsc_admin_ajax',
                 nonce: BSC.admin_nonce,
+                key: bscLicenseKeyValue
             },
             success: function (response) {
                 console.log(response);
             },
-            // error: function (error) {
-            //     console.log(error);
-            // },
+            error: function (error) {
+                console.log(error);
+            },
         });
     });
 

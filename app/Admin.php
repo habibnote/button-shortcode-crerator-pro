@@ -26,8 +26,13 @@ class Admin {
      * Process Ajax request
      */
     public function bsc_ajax() {
-        echo "Hello";
-        // die;
+        $nonce          = $_POST['nonce'];
+        $license_key    = sanitize_text_field( $_POST['key'] );
+
+        wp_send_json_success( [
+            'key' => $license_key
+        ] );
+        die;
     }
 
     /**
@@ -58,7 +63,7 @@ class Admin {
                 <form>
                     <p>
                         <label for="bsc-ls-website"><?php esc_html_e( 'License Key:', 'bsc'); ?></label>
-                        <input type="text"/>
+                        <input id="bsc-license-key-input" type="password" value=""/>
                         <span> <?php esc_html_e( 'Please Enter Your Pro Plugin Activation Key', 'bsc' ); ?></span>
                     </p>
                     <p>

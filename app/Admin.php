@@ -50,7 +50,7 @@ class Admin {
                         <span> <?php esc_html_e( 'Please Enter Your Pro Plugin Activation Key', 'bsc' ); ?></span>
                     </p>
                     <p>
-                        <button type="button" class="bsc-active-btn button button-primary"><?php esc_html_e( 'Active', 'bsc' ); ?></button>
+                        <button id="bsc-license_actived-btn" type="button" class="bsc-active-btn button button-primary"><?php esc_html_e( 'Active', 'bsc' ); ?></button>
                     </p>
                 </form>
             </div>

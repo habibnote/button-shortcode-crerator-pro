@@ -14,6 +14,13 @@ jQuery(document).ready(function ($) {
         $('.bsc-style-form').hide();
     });
 
+    /**
+     * Ajax call for license activeated
+     */
+    $(document).on('click', '#bsc-license_actived-btn', function(){
+        console.log( "Hello" );
+    });
+
 });
 
 jQuery(document).ready(function($){

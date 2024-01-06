@@ -39,18 +39,18 @@ class Admin {
     public function setting_callback() {
         ?>
         <div class="wrap bsc-license-page">
-            <h1>Plugin License Options</h1>
+            <h1><?php esc_html_e( 'Plugin License Options', 'bsc' ) ?></h1>
             <hr>
-            <p class="bsc-message">Please active your license key to make the plugin work.</p>
+            <p class="bsc-message"><?php esc_html_e( 'Please active your license key to make the plugin work.', 'bsc'); ?></p>
             <div class="bsc-license_form">
                 <form>
                     <p>
-                        <label for="bsc-ls-website">License Key:</label>
+                        <label for="bsc-ls-website"><?php esc_html_e( 'License Key:', 'bsc'); ?></label>
                         <input type="text"/>
-                        <span>Please Enter Your Pro Plugin Activation Key</span>
+                        <span> <?php esc_html_e( 'Please Enter Your Pro Plugin Activation Key', 'bsc' ); ?></span>
                     </p>
                     <p>
-                        <button class="bsc-active-btn button button-primary">Active</button>
+                        <button type="button" class="bsc-active-btn button button-primary"><?php esc_html_e( 'Active', 'bsc' ); ?></button>
                     </p>
                 </form>
             </div>
@@ -125,9 +125,9 @@ class Admin {
                                 'page'      => 'bsc_settings',
                             ), admin_url( 'edit.php' ) );
 
-                            _e( 'Button Shortcode Creator. It\'s a pro Plugin', 'bsc' );
+                            esc_html_e( 'Button Shortcode Creator. It\'s a pro Plugin', 'bsc' );
 
-                            printf( ' <a href="%s">%s</a>', $bsc_setting_url, __( 'Active now' , 'bsc' ) );
+                            printf( ' <a href="%s">%s</a>', $bsc_setting_url, esc_html__( 'Active now' , 'bsc' ) );
                         ?>
                     </p>
                 </div>

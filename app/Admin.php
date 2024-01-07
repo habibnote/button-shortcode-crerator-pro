@@ -62,6 +62,7 @@ class Admin {
 
                 if( $body['status'] === 'success' ) {
                     update_option( 'bsc_verify_license_key', $license_key );
+
                     wp_send_json_success( [
                         'verify' => 200
                     ] );
@@ -173,23 +174,28 @@ class Admin {
      * Admin Activate notice
      */
     public function activate_notice() {
+        $license_key        = get_option( 'bsc_license_key' );
+        $license_verify_key = get_option( 'bsc_verify_license_key' );
+
         if ( current_user_can( 'manage_options' ) ) {
-            ?>
-                <div class="notice notice-error is-dismissible">
-                    <p>
-                        <?php 
-                            $bsc_setting_url = add_query_arg( array(
-                                'post_type' => 'bs_creator',
-                                'page'      => 'bsc_settings',
-                            ), admin_url( 'edit.php' ) );
+            if( $license_key == '' && $license_verify_key == '' ):
+                ?>
+                    <div class="notice notice-error is-dismissible">
+                        <p>
+                            <?php 
+                                $bsc_setting_url = add_query_arg( array(
+                                    'post_type' => 'bs_creator',
+                                    'page'      => 'bsc_settings',
+                                ), admin_url( 'edit.php' ) );
 
-                            esc_html_e( 'Button Shortcode Creator. It\'s a pro Plugin', 'bsc' );
+                                esc_html_e( 'Button Shortcode Creator. It\'s a pro Plugin', 'bsc' );
 
-                            printf( ' <a href="%s">%s</a>', $bsc_setting_url, esc_html__( 'Active now' , 'bsc' ) );
-                        ?>
-                    </p>
-                </div>
-            <?php
+                                printf( ' <a href="%s">%s</a>', $bsc_setting_url, esc_html__( 'Active now' , 'bsc' ) );
+                            ?>
+                        </p>
+                    </div>
+                <?php
+            endif;
         }
     }
 }

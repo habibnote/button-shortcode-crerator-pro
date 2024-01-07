@@ -29,17 +29,7 @@
     color:#ffffff;
     padding: 10px 30px;
 }
-/* .bsc-btn_001{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.bsc-btn_001{
     text-decoration: none !important;
     padding: 10px 20px;
-    background-color:#ddd;
-    border-radius: 5px;
-    color: #222;
-} */
-/* .bsc-btn_001:hover{
-    color: #000;
-} */
+}

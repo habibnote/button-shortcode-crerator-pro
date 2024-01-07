@@ -209,7 +209,7 @@ class Admin {
         $license_verify_key = get_option( 'bsc_verify_license_key' );
 
         if ( current_user_can( 'manage_options' ) ) {
-            if( $license_key == '' && $license_verify_key == '' ):
+            if( $license_key == '' || $license_verify_key == '' ):
                 ?>
                     <div class="notice notice-error is-dismissible bsc-notice">
                         <p>

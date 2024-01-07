@@ -168,13 +168,18 @@ class Admin {
      * duplicate link button
      */
     public function add_duplicate_link_before_trash( $actions, $post ) {
+        $license_key        = get_option( 'bsc_license_key' );
+        $license_verify_key = get_option( 'bsc_verify_license_key' );
 
-        if ( $post->post_type == 'bs_creator' ) {
-            
-            // Add Duplicate link
-            $actions['duplicate'] = '<a href="' . esc_url(add_query_arg(array('post_id' => $post->ID), admin_url('admin-post.php?action=duplicate_post'))) . '">Duplicate</a>';
-            
-        }
+        if( $license_key && $license_verify_key ):
+            if( $license_key === $license_verify_key ) :
+                if ( $post->post_type == 'bs_creator' ) {
+                    
+                    // Add Duplicate link
+                    $actions['duplicate'] = '<a href="' . esc_url(add_query_arg(array('post_id' => $post->ID), admin_url('admin-post.php?action=duplicate_post'))) . '">Duplicate</a>';
+                }
+            endif;
+        endif;
         return $actions;
     }
 

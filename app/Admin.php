@@ -109,7 +109,7 @@ class Admin {
                             $license_key        = get_option( 'bsc_license_key' );
                             $license_verify_key = get_option( 'bsc_verify_license_key' );
 
-                            if( $license_key == '' && $license_verify_key == '' ) {
+                            if( $license_key == '' || $license_verify_key == '' ) {
                                 ?>
                                     <input id="bsc-license-key-input" type="password"/>
                                 <?php

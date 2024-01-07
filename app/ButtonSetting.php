@@ -176,7 +176,8 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-font-weight"><?php esc_html_e( 'Font Weight', 'bsc' ); ?></label>
                     <select name="bsc-font-weight" id="bsc-font-weight">
-                        <option value="none"><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_weight'] ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
+                        <option value="bold" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_weight'] ,'bold' ) ); ?>><?php esc_html_e( 'Bold', 'bsc' ); ?></option>
                     </select>
                 </div>
                 <div class="bsc-column">

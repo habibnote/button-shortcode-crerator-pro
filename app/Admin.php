@@ -105,11 +105,38 @@ class Admin {
                 <form>
                     <p>
                         <label for="bsc-ls-website"><?php esc_html_e( 'License Key:', 'bsc'); ?></label>
-                        <input id="bsc-license-key-input" type="password" value=""/>
-                        <span> <?php esc_html_e( 'Please Enter Your Pro Plugin Activation Key', 'bsc' ); ?></span>
+                        <?php 
+                            $license_key        = get_option( 'bsc_license_key' );
+                            $license_verify_key = get_option( 'bsc_verify_license_key' );
+
+                            if( $license_key == '' && $license_verify_key == '' ) {
+                                ?>
+                                    <input id="bsc-license-key-input" type="password"/>
+                                <?php
+                            }
+                            else{
+                                if( $license_key === $license_verify_key ) {
+                                    ?>
+                                    <input id="bsc-license-key-input" type="password" value="$license_verify_key" disabled/>
+                                    <?php
+                                }
+                            }
+
+                            if( $license_verify_key ) {
+                                ?>
+                                    <span style="color:chartreuse"> <?php esc_html_e( 'Your Key is Verifyed', 'bsc' ); ?></span>
+                                <?php 
+                            }
+                        ?>
                     </p>
                     <p>
-                        <button id="bsc-license_actived-btn" type="button" class="bsc-active-btn button button-primary"><?php esc_html_e( 'Active', 'bsc' ); ?></button>
+                        <?php 
+                            if( ! $license_verify_key ) {
+                                ?>
+                                    <button id="bsc-license_actived-btn" type="button" class="bsc-active-btn button button-primary"><?php esc_html_e( 'Active', 'bsc' ); ?></button>
+                                <?php 
+                            }
+                        ?>
                     </p>
                 </form>
             </div>

@@ -35,7 +35,6 @@ if( ! function_exists( 'bsc_is_selected' ) ) {
     }
 }
 
-
 /**
  * Function for Duplicate post 
  */

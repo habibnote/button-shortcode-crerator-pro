@@ -54,10 +54,11 @@ class Shortcode {
                         ?>
                         <?php 
                             printf(
-                                "<a class='bsc-btn_001 %s' id='%s' href='%s'>%s</a>",
+                                "<a class='bsc-btn_001 %s' id='%s' href='%s' target='%s'>%s</a>",
                                 $bsc_btn_style_setting['bsc_btn_class'],
                                 $bsc_btn_style_setting['bsc_btn_id'],
                                 $bsc_btn_style_setting['bsc_btn_link'],
+                                $bsc_btn_style_setting['bsc_new_tab'] ? '_blank' : '',
                                 $bsc_btn_style_setting['bsc_btn_text']
                             );
                             /**

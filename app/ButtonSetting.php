@@ -39,6 +39,11 @@ class ButtonSetting {
      */
     public function setting_container( $post_id ) {
         $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
+
+        echo "<pre>";
+        print_r( $bsc_btn_style_setting );
+        echo "</pre>";
+
         ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
@@ -62,7 +67,17 @@ class ButtonSetting {
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-new-tab"><?php esc_html_e( 'Open a New Tab', 'bsc' ); ?></label>
-                    <input type="checkbox" name="bsc-new-tab" id="bsc-new-tab">
+                    <?php
+                        if( $bsc_btn_style_setting['bsc_new_tab'] === 'on' ) {
+                            ?>
+                                <input type="checkbox" name="bsc-new-tab" id="bsc-new-tab" checked>
+                            <?php
+                        }else{
+                            ?>
+                                <input type="checkbox" name="bsc-new-tab" id="bsc-new-tab">
+                            <?php
+                        }
+                    ?>
                 </div>
             </div>
 

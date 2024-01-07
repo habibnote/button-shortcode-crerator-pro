@@ -148,7 +148,8 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-hover-effect"><?php esc_html_e( 'Hover Effect', 'bsc' ); ?></label>
                     <select name="bsc-hover-effect" id="bsc-hover-effect">
-                        <option value="none"><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_hover_effect'] ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_hover_effect'] ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>

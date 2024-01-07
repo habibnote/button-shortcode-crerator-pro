@@ -76,6 +76,7 @@ class Shortcode {
                                     .bsc-btn_001:hover{
                                         color: %s;
                                         background-color:%s;
+                                        transition: %s;
                                     }
                                 </style>",
                                 $bsc_btn_style_setting['bsc_btn_width'],
@@ -86,6 +87,8 @@ class Shortcode {
 
                                 $bsc_btn_style_setting['bsc_btn_hover_color'],
                                 $bsc_btn_style_setting['bsc_btn_hover_bg_color'],
+
+                                $bsc_btn_style_setting['bsc_hover_effect'] === 'yes' ? '.3s all ease' : 'none',
                             );
                         ?>
                     </div>

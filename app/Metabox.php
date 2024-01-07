@@ -20,11 +20,11 @@ class Metabox {
                 add_action( 'manage_bs_creator_posts_custom_column', [$this, 'bsc_addshortcode_in_column'], 10, 2 );
 
                 add_filter( 'manage_edit-bs_creator_columns', [$this, 'bsc_manage_post_columns'] );
+
+                add_action( 'add_meta_boxes', [$this, 'bsc_metaboxes'] );
+                add_action( 'save_post', [$this, 'bsc_save_meta_info'] ); 
             }
         }
-        
-        add_action( 'add_meta_boxes', [$this, 'bsc_metaboxes'] );
-        add_action( 'save_post', [$this, 'bsc_save_meta_info'] ); 
     }
 
     /**

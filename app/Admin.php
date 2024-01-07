@@ -29,9 +29,40 @@ class Admin {
         $nonce          = $_POST['nonce'];
         $license_key    = sanitize_text_field( $_POST['key'] );
 
-        wp_send_json_success( [
-            'key' => $license_key
-        ] );
+        if( wp_verify_nonce( $nonce, 'bsc_nonce_admin' ) ) {
+
+            $api_url    = 'https://acceleramota.com/wp-json/bsc/v1/verify-license';
+            $body_data  = [
+                'license_key' =>  $license_key
+            ]; 
+
+            $args = array(
+                'body'        => json_encode( $body_data ),
+                'headers'     => array(
+                    'Content-Type' => 'application/json',
+                ),
+            );
+
+            $response = wp_remote_post( $api_url, $args );
+            $body = wp_remote_retrieve_body( $response );
+
+            // Check for errors
+            // if ( is_wp_error( $response ) ) {
+                
+            //     wp_send_json_success( [
+            //         'message' => __( 'Invalid API Key', 'bsc' )
+            //     ] );
+
+            // } else {
+                
+            //     $body = wp_remote_retrieve_body( $response );
+
+            //     wp_send_json_success( [
+            //         'key' => $body
+            //     ] );
+
+            // }
+        }
         die;
     }
 

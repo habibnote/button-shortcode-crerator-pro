@@ -32,7 +32,11 @@ jQuery(document).ready(function ($) {
                 key: bscLicenseKeyValue
             },
             success: function (response) {
-                console.log(response);
+                if( response.success ) {
+                    if( response.data.verify == 200){
+                        
+                    };
+                }
             },
             error: function (error) {
                 console.log(error);

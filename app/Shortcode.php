@@ -72,6 +72,7 @@ class Shortcode {
                                         color: %s;
                                         background-color:%s;
                                         border-radius: %spx;
+                                        box-shadow: %s;
                                     }
                                     .bsc-btn_001:hover{
                                         color: %s;
@@ -84,6 +85,7 @@ class Shortcode {
                                 $bsc_btn_style_setting['bsc_btn_color'],
                                 $bsc_btn_style_setting['bsc_btn_bg_color'],
                                 $bsc_btn_style_setting['bsc_border_radius'],
+                                $bsc_btn_style_setting['bsc_shadow'] === 'yes' ? '0px 2px 15px 5px rgba(219,219,219,0.75)' : 'none', 
 
                                 $bsc_btn_style_setting['bsc_btn_hover_color'],
                                 $bsc_btn_style_setting['bsc_btn_hover_bg_color'],

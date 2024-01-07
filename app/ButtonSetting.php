@@ -163,7 +163,8 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-shadow"><?php esc_html_e( 'Shadow', 'bsc' ); ?></label>
                     <select name="bsc-shadow" id="bsc-shadow">
-                        <option value="none"><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_shadow'] ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_shadow'] ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>

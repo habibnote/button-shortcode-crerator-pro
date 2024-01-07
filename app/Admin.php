@@ -117,7 +117,7 @@ class Admin {
                             else{
                                 if( $license_key === $license_verify_key ) {
                                     ?>
-                                    <input id="bsc-license-key-input" type="password" value="$license_verify_key" disabled/>
+                                    <input id="bsc-license-key-input" type="password" value="<?php echo $license_verify_key ?>" disabled/>
                                     <?php
                                 }
                             }

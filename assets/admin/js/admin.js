@@ -34,7 +34,10 @@ jQuery(document).ready(function ($) {
             success: function (response) {
                 if( response.success ) {
                     if( response.data.verify == 200){
-                        
+                        $("#bsc-license-key-input").prop("disabled", true);
+                        $('#bsc-verify-message').html('Your Key is Verifye').css('color', 'chartreuse');
+                        $('.bsc-notice').hide();
+                        $('#bsc-license_actived-btn').hide();
                     };
                 }
             },

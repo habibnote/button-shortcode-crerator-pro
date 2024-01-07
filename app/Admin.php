@@ -126,6 +126,10 @@ class Admin {
                                 ?>
                                     <span style="color:chartreuse"> <?php esc_html_e( 'Your Key is Verifyed', 'bsc' ); ?></span>
                                 <?php 
+                            }else{
+                                ?>
+                                    <span id="bsc-verify-message"> <?php esc_html_e( 'Please Enter Your Pro Plugin Activation Key', 'bsc' ); ?></span>
+                                <?php 
                             }
                         ?>
                     </p>
@@ -207,7 +211,7 @@ class Admin {
         if ( current_user_can( 'manage_options' ) ) {
             if( $license_key == '' && $license_verify_key == '' ):
                 ?>
-                    <div class="notice notice-error is-dismissible">
+                    <div class="notice notice-error is-dismissible bsc-notice">
                         <p>
                             <?php 
                                 $bsc_setting_url = add_query_arg( array(

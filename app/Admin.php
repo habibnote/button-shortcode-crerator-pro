@@ -44,24 +44,29 @@ class Admin {
             );
 
             $response = wp_remote_post( $api_url, $args );
-            $body = wp_remote_retrieve_body( $response );
 
             // Check for errors
-            // if ( is_wp_error( $response ) ) {
+            if ( is_wp_error( $response ) ) {
                 
-            //     wp_send_json_success( [
-            //         'message' => __( 'Invalid API Key', 'bsc' )
-            //     ] );
+                wp_send_json_success( [
+                    'message' => __( 'Invalid API Key', 'bsc' )
+                ] );
 
-            // } else {
-                
-            //     $body = wp_remote_retrieve_body( $response );
+            } else {
+                $body = wp_remote_retrieve_body( $response );
+                $body = json_decode( $body, true );
 
-            //     wp_send_json_success( [
-            //         'key' => $body
-            //     ] );
-
-            // }
+                if( $body['status'] === 'success' ) {
+                    wp_send_json_success( [
+                        'verfiy' => 'true'
+                    ] );
+                }
+                else{
+                    wp_send_json_success( [
+                        'verfiy' => 'false'
+                    ] );
+                }
+            }
         }
         die;
     }

@@ -58,12 +58,12 @@ class Admin {
 
                 if( $body['status'] === 'success' ) {
                     wp_send_json_success( [
-                        'verfiy' => 'true'
+                        'verifiy' => 'true'
                     ] );
                 }
                 else{
                     wp_send_json_success( [
-                        'verfiy' => 'false'
+                        'verifiy' => 'false'
                     ] );
                 }
             }

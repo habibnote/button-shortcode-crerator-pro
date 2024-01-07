@@ -39,11 +39,6 @@ class ButtonSetting {
      */
     public function setting_container( $post_id ) {
         $bsc_btn_style_setting = get_post_meta( $post_id, 'bsc_btn_style_setting', true );
-
-        echo "<pre>";
-        print_r( $bsc_btn_style_setting );
-        echo "</pre>";
-
         ?>  
             <div class="bsc-single-row">
                 <div class="bsc-column">
@@ -183,7 +178,8 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-font-style"><?php esc_html_e( 'Font Style', 'bsc' ); ?></label>
                     <select name="bsc-font-style" id="bsc-font-style">
-                        <option value="none"><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_style'] ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
+                        <option value="italic" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_style'] ,'italic' ) ); ?>><?php esc_html_e( 'Italic', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>

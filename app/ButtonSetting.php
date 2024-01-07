@@ -63,7 +63,8 @@ class ButtonSetting {
                 <div class="bsc-column">
                     <label for="bsc-new-tab"><?php esc_html_e( 'Open a New Tab', 'bsc' ); ?></label>
                     <?php
-                        if( $bsc_btn_style_setting['bsc_new_tab'] === 'on' ) {
+                        $bsc_new_tab = $bsc_btn_style_setting['bsc_new_tab'] ?? '';
+                        if( $bsc_new_tab === 'on' ) {
                             ?>
                                 <input type="checkbox" name="bsc-new-tab" id="bsc-new-tab" checked>
                             <?php
@@ -142,9 +143,12 @@ class ButtonSetting {
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-hover-effect"><?php esc_html_e( 'Hover Effect', 'bsc' ); ?></label>
+                    <?php
+                        $bsc_hover_effect = $bsc_btn_style_setting['bsc_hover_effect'] ?? '';
+                    ?>
                     <select name="bsc-hover-effect" id="bsc-hover-effect">
-                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_hover_effect'] ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
-                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_hover_effect'] ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
+                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_hover_effect ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_hover_effect ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>
@@ -157,9 +161,12 @@ class ButtonSetting {
             <div class="bsc-single-row">
                 <div class="bsc-column">
                     <label for="bsc-shadow"><?php esc_html_e( 'Shadow', 'bsc' ); ?></label>
+                    <?php 
+                        $bsc_shadow = $bsc_btn_style_setting['bsc_shadow'] ?? '';
+                    ?>
                     <select name="bsc-shadow" id="bsc-shadow">
-                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_shadow'] ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
-                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_shadow'] ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
+                        <option value="none" <?php esc_html_e( bsc_is_selected( $bsc_shadow ,'none' ) ); ?>><?php esc_html_e( 'none', 'bsc' ); ?></option>
+                        <option value="yes" <?php esc_html_e( bsc_is_selected( $bsc_shadow ,'yes' ) ); ?>><?php esc_html_e( 'Yes', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>
@@ -170,16 +177,22 @@ class ButtonSetting {
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-font-weight"><?php esc_html_e( 'Font Weight', 'bsc' ); ?></label>
+                    <?php 
+                        $bsc_font_weight = $bsc_btn_style_setting['bsc_font_weight'] ?? '';
+                    ?>
                     <select name="bsc-font-weight" id="bsc-font-weight">
-                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_weight'] ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
-                        <option value="bold" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_weight'] ,'bold' ) ); ?>><?php esc_html_e( 'Bold', 'bsc' ); ?></option>
+                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_font_weight ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
+                        <option value="bold" <?php esc_html_e( bsc_is_selected( $bsc_font_weight ,'bold' ) ); ?>><?php esc_html_e( 'Bold', 'bsc' ); ?></option>
                     </select>
                 </div>
                 <div class="bsc-column">
                     <label for="bsc-font-style"><?php esc_html_e( 'Font Style', 'bsc' ); ?></label>
+                    <?php 
+                        $bsc_font_style = $bsc_btn_style_setting['bsc_font_style'] ?? '';
+                    ?>
                     <select name="bsc-font-style" id="bsc-font-style">
-                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_style'] ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
-                        <option value="italic" <?php esc_html_e( bsc_is_selected( $bsc_btn_style_setting['bsc_font_style'] ,'italic' ) ); ?>><?php esc_html_e( 'Italic', 'bsc' ); ?></option>
+                        <option value="normal" <?php esc_html_e( bsc_is_selected( $bsc_font_style ,'normal' ) ); ?>><?php esc_html_e( 'Normal', 'bsc' ); ?></option>
+                        <option value="italic" <?php esc_html_e( bsc_is_selected( $bsc_font_style ,'italic' ) ); ?>><?php esc_html_e( 'Italic', 'bsc' ); ?></option>
                     </select>
                 </div>
             </div>
